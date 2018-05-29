@@ -1,17 +1,16 @@
-# OCLGen
+# STUIOS
 
 ## Overview of the approach
 
-System testing plays a crucial role in safety-critical domains, e.g., automotive, where system test cases are used to demonstrate the compliance of software with its functional and safety requirements. Unfortunately, since requirements are typically written in natural language, significant engineering effort is required to derive test cases from requirements.
 
-In such a context, automated support for generating system test cases from requirements specifications written in natural language would be highly beneficial. Unfortunately, existing approaches have limited applicability. For example, some of them require that software engineers provide formal specifications that capture some of the software behavior described using natural language. The effort needed to define such specifications is usually a significant deterrent for software developers.
+Uncertainty in timing properties (e.g., detection time of external events) is a common reality in embedded software systems since these systems interact with complex physical environments.
 
-OCLgen is an approach which largely automates the generation of the additional formal specifications required by an existing test generation approach named UMTG. More specifically, OCLgen relies on semantic analysis techniques to automatically derive the pre- and post-conditions of the activi- ties described in use case specifications. The generated conditions are used by UMTG to identify the test inputs that cover all the use case scenarios described in use case specifications. In practice, the proposed approach enables the automated generation of test cases from use case specifications while avoiding most of the additional modeling effort required by UMTG.
+Such time uncertainty leads to non-determinism. For example, as a result of time uncertainty, time-triggered operations may either generate di erent valid outputs across di erent executions, or experience failures (e.g., results not being generated in the expected time window) that occur only occasionally over many executions. For these reasons, time uncertainty makes the generation of e ective test oracles for timing requirements a challenging task.
 
-Results from an industrial case study show that the approach can automatically and correctly generate more than 75% of the pre- and post-conditions characterizing the activities described in use case specifications.
+To address the above challenge, we propose STUIOS (Stochastic Testing with Unique Input Output Se- quences), an approach for the automated generation of stochastic oracles for test cases that verify the capability of a software system to ful ll timing constraints in the presence of time uncertainty. Such stochastic oracles entail the statistical analysis of repeated test case executions based on test output probabilities predicted by means of statistical model checking. Results from two industrial case studies in the automotive domain demonstrate that this approach improves the fault detection e ectiveness of tests suites derived from timed automata, compared to traditional approaches.
 
 
-## Data
+## Case Studies and Empirical Results
 
-The list of VerbNet classes that are likely/unlikely to appear in use case specifications and the list of VerbNet classes whose members can be processed by means of the meta-verb-transformation rule described in the paper are enclosed in a Excel document that can be downloaded from the following URL .
-
+The artifacts required to replicate the empirical results presented in the paper (case study systems, test suites, and faulty systems organized by research question) can be downloaded from the following GIT repositories
+https://bitbucket.org/FPastore/stuios_casestudies_bodysense https://bitbucket.org/charles-wang/stuios_casestudies_hod
