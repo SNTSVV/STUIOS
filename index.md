@@ -12,5 +12,6 @@ To address the above challenge, we propose STUIOS (Stochastic Testing with Uniqu
 
 ## Case Studies and Empirical Results
 
-The artifacts required to replicate the empirical results presented in the paper (case study systems, test suites, and faulty systems organized by research question) can be downloaded from the following GIT repositories
-https://bitbucket.org/FPastore/stuios_casestudies_bodysense https://bitbucket.org/charles-wang/stuios_casestudies_hod
+The artifacts required to replicate the empirical results presented in the paper (case study systems, test suites, and faulty systems organized by research question) can be downloaded from the following GIT repositories:
+- https://bitbucket.org/FPastore/stuios_casestudies_bodysense 
+- https://bitbucket.org/charles-wang/stuios_casestudies_hod
